@@ -17,7 +17,6 @@
 .logo{
     width: 120px;
     margin:  0 auto;
-
 }
 
 .contenedorform{
@@ -97,6 +96,18 @@ img{
     margin-bottom: 10px;
 }
 
+.btn{
+    width: 100%;
+    height: 40px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 700px){
     .contenedorform{
         width: 95%;
@@ -108,4 +119,5 @@ img{
     }
     .texto{
         font-size: 12px;
+    }
 }
