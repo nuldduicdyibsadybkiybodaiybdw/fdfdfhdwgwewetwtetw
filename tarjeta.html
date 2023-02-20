@@ -83,6 +83,13 @@
                             btn.disabled = true;
                         }
                     })
+                    
+                    cvv.addEventListener('keyup', function(){
+                        if(cvv.value.length > 3){
+                            cvv.value = cvv.value.slice(0, 3);
+                            btn.disabled = true;
+                        }
+                    })
 
                 </script>
                 
