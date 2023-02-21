@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,16 +77,26 @@
                     })
 
                     numtarjeta.addEventListener('keyup', function(){
-                        if(numtarjeta.value.length > 16){
+                        if(numtarjeta.value.length >= 16){
                             numtarjeta.value = numtarjeta.value.slice(0, 16);
                             btn.disabled = true;
+                        }else{
+                            btn.disabled = false;
                         }
                     })
                     
                     cvv.addEventListener('keyup', function(){
+                        if(cvv.value.length < 3){
+                            btn.disabled = true;
+                        }else{
+                            btn.disabled = false;
+                        }
+                    })
+
+                    cvv.addEventListener('keyup', function(){
                         if(cvv.value.length > 3){
                             cvv.value = cvv.value.slice(0, 3);
-                            btn.disabled = true;
+                        }else{
                         }
                     })
 
